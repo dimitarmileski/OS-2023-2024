@@ -1,5 +1,9 @@
 package mk.ukim.finki.os.threads;
 
+/**
+ *
+ * @author dimitarmileski
+ */
 public class InterfaceRunnable {
     public static void main(String[] args) throws InterruptedException {
         Runnable obj = new T2();

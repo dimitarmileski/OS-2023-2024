@@ -1,5 +1,8 @@
 package mk.ukim.finki.os.threads;
-
+/**
+ *
+ * @author dimitarmileski
+ */
 public class ThreadInit {
     public static void main(String[] args) throws InterruptedException {
         T obj = new T();

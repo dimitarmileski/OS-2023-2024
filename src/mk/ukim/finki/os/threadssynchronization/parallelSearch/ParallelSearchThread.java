@@ -1,5 +1,9 @@
 package mk.ukim.finki.os.threadssynchronization.parallelSearch;
 
+/**
+ *
+ * @author ristes
+ */
 public class ParallelSearchThread extends Thread {
 
     SharedArray arr;

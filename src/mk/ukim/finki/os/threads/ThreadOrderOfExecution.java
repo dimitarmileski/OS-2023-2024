@@ -2,6 +2,10 @@ package mk.ukim.finki.os.threads;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ *
+ * @author dimitarmileski
+ */
 public class ThreadOrderOfExecution {
     public static void main(String[] args) {
         ThrA thrA = new ThrA();

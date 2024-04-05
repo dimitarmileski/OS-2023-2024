@@ -1,5 +1,8 @@
 package mk.ukim.finki.os.threads;
-
+/**
+ *
+ * @author dimitarmileski
+ */
 public class RaceCondition {
     public static void main(String[] args) {
         SafeIncrement inc = new SafeIncrement(10);

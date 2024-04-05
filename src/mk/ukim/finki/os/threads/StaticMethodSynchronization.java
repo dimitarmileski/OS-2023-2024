@@ -1,4 +1,8 @@
 package mk.ukim.finki.os.threads;
+/**
+ *
+ * @author dimitarmileski
+ */
 public class StaticMethodSynchronization {
     public static void main(String[] args) {
         ThreadSafeStaticMethods inc = new ThreadSafeStaticMethods(10);

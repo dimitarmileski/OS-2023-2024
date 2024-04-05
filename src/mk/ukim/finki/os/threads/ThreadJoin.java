@@ -3,6 +3,10 @@ package mk.ukim.finki.os.threads;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ *
+ * @author dimitarmileski
+ */
 public class ThreadJoin {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Exam rules: Max time spend on exam 10 sec.");

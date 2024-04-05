@@ -2,6 +2,10 @@ package mk.ukim.finki.os.threadssynchronization;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ *
+ * @author dimitarmileski
+ */
 public class ExamScheduler {
     public static void main(String[] args) {
         int numLabs = 10;

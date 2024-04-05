@@ -3,6 +3,10 @@ package mk.ukim.finki.os.threadssynchronization.parallelSearch;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ *
+ * @author ristes
+ */
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 

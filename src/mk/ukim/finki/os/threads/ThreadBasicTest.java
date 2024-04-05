@@ -1,5 +1,8 @@
 package mk.ukim.finki.os.threads;
-
+/**
+ *
+ * @author dimitarmileski
+ */
 public class ThreadBasicTest {
     public static void main(String[] args) throws InterruptedException {
         ThreadA threadAObj = new ThreadA();
