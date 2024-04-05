@@ -1,4 +1,4 @@
-package mk.ukim.finki.os.Threads;
+package mk.ukim.finki.os.threads;
 
 public class ThreadInit {
     public static void main(String[] args) throws InterruptedException {

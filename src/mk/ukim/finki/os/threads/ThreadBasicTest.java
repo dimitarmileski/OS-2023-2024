@@ -1,4 +1,4 @@
-package mk.ukim.finki.os.Threads;
+package mk.ukim.finki.os.threads;
 
 public class ThreadBasicTest {
     public static void main(String[] args) throws InterruptedException {
@@ -9,6 +9,11 @@ public class ThreadBasicTest {
         threadBObj.start();
 
         System.out.println("Main done!");
+//        Thread.sleep(15000);
+//        threadAObj.interrupt();
+//        threadBObj.interrupt();
+//        threadAObj.destroy();
+//        threadBObj.destroy();
     }
 }
 
@@ -18,6 +23,20 @@ class ThreadA extends Thread{
         for (int i = 1; i < 20; i++) {
             System.out.println("A: " + i);
         }
+
+//        try {
+//            //boolean isInterupted = interrupted();
+//
+//            while(!interrupted()){
+//                System.out.println("Thread A is not interupted");
+//                Thread.sleep(1000);
+//            }
+//             // Wait for 1 minute (60,000 milliseconds)
+//        } catch (InterruptedException e) {
+//            // Handle the InterruptedException if necessary
+//            System.out.println("Thread A is interupted! Housekeeping.");
+//            e.printStackTrace();
+//        }
 
         System.out.println("A done!");
     }
