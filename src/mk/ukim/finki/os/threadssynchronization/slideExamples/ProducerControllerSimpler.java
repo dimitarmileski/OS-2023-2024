@@ -6,22 +6,16 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ProducerController {
+public class ProducerControllerSimpler {
 
     public static int NUM_RUN = 50;
 
-    static Semaphore accessBuffer;
-
-    static Lock lock;
-
-    static int numChecks;
-
-    static Semaphore canCheck;
+    static Semaphore producer;
+    static Semaphore controller;
 
     public static void init() {
-        accessBuffer = new Semaphore(1);
-        lock = new ReentrantLock();
-        canCheck = new Semaphore(10);
+        producer= new Semaphore(1);
+        controller= new Semaphore(10);
     }
 
     public static class Buffer {
@@ -67,9 +61,15 @@ public class ProducerController {
         }
 
         public void execute() throws InterruptedException {
-            accessBuffer.acquire();
+            producer.acquire();
+            // Acquires the given number of permits
+            // from this semaphore, blocking
+            // until all are available
+
+            controller.acquire(10);
             buffer.produce();
-            accessBuffer.release();
+            controller.release(10);
+            producer.release();
         }
 
         @Override
@@ -93,26 +93,9 @@ public class ProducerController {
         }
 
         public void execute() throws InterruptedException {
-
-            lock.lock();
-            if(numChecks == 0){
-                accessBuffer.acquire();
-            }
-            numChecks++;
-            lock.unlock();
-
-            canCheck.acquire();
+            controller.acquire();
             buffer.check();
-
-
-            lock.lock();
-            numChecks--;
-            canCheck.release();
-
-            if(numChecks == 0){
-                accessBuffer.release();
-            }
-            lock.unlock();
+            controller.release();
         }
 
         @Override
